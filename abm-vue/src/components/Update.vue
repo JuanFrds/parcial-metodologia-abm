@@ -75,14 +75,13 @@ export default {
     methods: {
         actualizarAlumno(){
 
-            // console.log(this.alumno.nombre)
             const dataEnviar = {
                 dni: this.alumno.dni, 
                 nombre: this.alumno.nombre,
                 apellido: this.alumno.apellido,
-                curso: this.alumno.curso
+                curso: this.alumno.curso,
+                fechaNacimiento: this.alumno.fechaNacimiento
                 };
-            console.log(dataEnviar);
 
             fetch(`http://localhost:3000/rest/putAlumno`, {
                 method: 'PUT',
@@ -101,7 +100,6 @@ export default {
                 .then( response => response.json())
                 .then( data => {
                   this.alumno = data;
-                  console.log(this.alumno); 
                   })
                 .catch( console.log )
         }

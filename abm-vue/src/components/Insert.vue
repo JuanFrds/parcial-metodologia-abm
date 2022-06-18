@@ -67,7 +67,6 @@ export default {
     methods:{
         agregarAlumno(){
 
-            // console.log(this.alumno.nombre)
             const dataEnviar = {
                 dni: this.alumno.dni, 
                 nombre: this.alumno.nombre,
